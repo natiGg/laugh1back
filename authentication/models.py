@@ -1,7 +1,7 @@
 import uuid
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser,PermissionsMixin
-from rest_framework_jwt import RefreshToken
+from rest_framework_simplejwt import tokens
 # Create your models here.
 class UserManager(BaseUserManager):
     def create_user(self,username,email,password=None):
@@ -54,7 +54,7 @@ class User(AbstractBaseUser,PermissionsMixin):
         return self.email
         
     def tokens(self):
-        refresh=RefreshToken.for_user(self)
+        refresh=tokens.RefreshToken.for_user(self)
         return {
             'refresh':str(refresh),
             'access':str(refresh.access_token)

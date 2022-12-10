@@ -14,7 +14,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from authentication.serializers import UserRegisteration
 from rest_framework.generics import CreateAPIView,GenericAPIView,RetrieveUpdateDestroyAPIView
-from rest_framework_jwt import RefreshToken
+from rest_framework_simplejwt import tokens
 from rest_framework import views
 from authentication.serializers import EmailVerificationSerializer,EmailCheckSerializer,UnameSuggestSerializer,UnameCheckSerializer,LoginSerializer,PasswordResetEmailSerializer,ChangePwdSerializer,UpdateProfileSerializer,UserAvatarSerializer
 from drf_yasg.utils import swagger_auto_schema
@@ -56,7 +56,7 @@ class RegistrationView(GenericAPIView):
         serializer.save()
         user_data = serializer.data
         user=User.objects.get(email=user_data["email"])
-        token = RefreshToken.for_user(user).access_token
+        token =tokens.RefreshToken.for_user(user).access_token
         current_site = get_current_site(request).domain
         relativeLink=reverse('email-verify')
         redirect_url=request.data.get("redirect_url","")

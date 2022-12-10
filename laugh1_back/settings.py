@@ -68,7 +68,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'roast.urls'
+ROOT_URLCONF = 'laugh1_back.urls'
 
 TEMPLATES = [
     {
@@ -86,7 +86,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'roast.wsgi.application'
+WSGI_APPLICATION = 'laugh1_back.wsgi.application'
 
 
 # Database

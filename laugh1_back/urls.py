@@ -12,7 +12,7 @@ from django.conf.urls.static import static #add this
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="roast API",
+      title="lauhg1 API",
       default_version='v1',
       description="Test description",
       terms_of_service="https://www.google.com/policies/terms/",

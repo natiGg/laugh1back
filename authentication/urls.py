@@ -1,9 +1,8 @@
 from unicodedata import name
-from django.conf.urls import url
 from authentication.views import UserAvatarUpload,EmailChecker,UnameChecker,ChangePwdAPIView, PasswordTokenCheckAPI, RegistrationView,PasswordResetEmail,UpdateProfileView,UnameSuggest
 from authentication.views import VerifyEmail
 from django.urls import path
-from rest_framework_jwt.views import (
+from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
