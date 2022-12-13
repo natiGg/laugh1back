@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL
+
 from email.mime import image
 from django.http import request
 from django.shortcuts import render

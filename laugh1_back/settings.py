@@ -93,14 +93,15 @@ WSGI_APPLICATION = 'laugh1_back.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-   'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
-      'NAME':'laugh1',
-      'USER':'postgres',
-      'PASSWORD':'nG#trialG',
-      'HOST':'localhost',
-      'PORT':'5432'
-   }
+    'default': {
+        'NAME': 'dinkacreativesco_laugh1',
+        'ENGINE': 'mysql.connector.django',
+        'USER': 'dinkacreativesco_laugh1',
+        'PASSWORD': 'trial1@error',
+        'OPTIONS': {
+          'autocommit': True,
+        },
+    }
 }
 
 
@@ -159,9 +160,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 MEDIA_URL = "/media/" 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD='django.db.models.BigAutoField' 
 
@@ -170,4 +172,5 @@ EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
 EMAIL_HOST_USER ="nathangere12@gmail.com"
-EMAIL_HOST_PASSWORD ="trial1@error"
+EMAIL_HOST_PASSWORD ="vinciztqwfjasfws"
+
