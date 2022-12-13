@@ -17,4 +17,4 @@ jobs:
         server: www.dinkacreatives.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /laugh1.dinkacreatives.com/
+        server-dir: /laugh1.dinkacreatives.com/laugh1_back/
