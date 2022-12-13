@@ -14,7 +14,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="lauhg1 API",
       default_version='v1',
-      description="Test description",
+      description="This a test from dinkadmin of the laugh1 api",
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="contact@snippets.local"),
       license=openapi.License(name="BSD License"),
