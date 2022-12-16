@@ -117,8 +117,6 @@ REST_FRAMEWORK={
 }
 
 
-
-
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': datetime.timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=30),
@@ -126,6 +124,8 @@ SIMPLE_JWT = {
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 AUTH_USER_MODEL = 'authentication.User'
+
+APPEND_SLASH=False
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -173,4 +173,6 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
 EMAIL_HOST_USER ="nathangere12@gmail.com"
 EMAIL_HOST_PASSWORD ="vinciztqwfjasfws"
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 

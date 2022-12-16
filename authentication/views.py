@@ -40,6 +40,15 @@ from django.http import HttpResponsePermanentRedirect
 import os
 from rest_framework.parsers import MultiPartParser, FormParser
 
+from rest_framework import status
+from rest_framework.authtoken.models import Token
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+
+from social_django.utils import psa
+
+from requests.exceptions import HTTPError
 
 class CustomRedirect(HttpResponsePermanentRedirect):
 
@@ -229,3 +238,4 @@ class UnameSuggest(generics.GenericAPIView):
                 return Response(suggestions,status=status.HTTP_200_OK)
         except Exception as e:
                 return Response(suggestions,status=status.HTTP_200_OK)
+

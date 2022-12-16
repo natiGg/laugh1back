@@ -1,7 +1,7 @@
 from unicodedata import name
 from authentication.views import UserAvatarUpload,EmailChecker,UnameChecker,ChangePwdAPIView, PasswordTokenCheckAPI, RegistrationView,PasswordResetEmail,UpdateProfileView,UnameSuggest
 from authentication.views import VerifyEmail
-from django.urls import path
+from django.urls import path,re_path
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -20,5 +20,4 @@ urlpatterns = [
     path('uname-checker/',UnameChecker.as_view(),name="uname-chekcer"),
     path('uname-suggest/',UnameSuggest.as_view(),name="uname-chekcer"),
     path('avatar-upload/',UserAvatarUpload.as_view(),name="avatar-upload"),
-
 ]
